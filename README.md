@@ -1,4 +1,4 @@
-# All in One Accessibility®: Sanity Plugin
+# All in One Accessibility®: Builder.io Plugin
 
 ## Enhance Your Website's Accessibility with All in One Accessibility®
 
