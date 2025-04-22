@@ -1,0 +1,61 @@
+{
+  "name": "builderio-all-in-one-accessibility",
+  "version": "1.0.0",
+  "description": "Website accessibility widget for improving WCAG 2.0, 2.1, 2.2 and ADA compliance!",
+  "author": "Skynet Technologies USA LLC <developer3@skynettechnologies.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skynettechnologies/builderio-all-in-one-accessibility"
+  },
+  "bugs": {
+    "url": "https://github.com/skynettechnologies/builderio-all-in-one-accessibility/issues"
+  },
+  "homepage": "https://github.com/skynettechnologies/builderio-all-in-one-accessibility#readme",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/preset-react": "^7.26.3",
+    "@builder.io/app-context": "^1.0.0",
+    "@builder.io/react": "^8.0.13",
+    "babel-loader": "^10.0.0",
+    "webpack": "^5.99.5",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.1",
+    "typescript": "^5.8.3",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "styled-components": "^6.1.15",
+    "react-router-dom": "^7.2.0",
+    "@types/react": "^19.0.10",
+    "react-bootstrap": "^2.10.9",
+    "ts-loader": "^9.5.2",
+    "source-map-loader": "^5.0.0",
+    "rimraf": "^6.0.1"
+  },
+  "output": "plugin.system.js",
+  "main": "dist/plugin.system.js",
+  "typings": "dist/types/plugin.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "tslint  --project tsconfig.json -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "rimraf dist",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development",
+    "release:dev": "npm run build && npm version prerelease --no-git-tag-version && npm publish --tag dev",
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watch",
+    "test:prod": "npm run lint && npm run test -- --no-cache",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls"
+  },
+"dependencies": {
+    "@builder.io/sdk": "^6.0.6",
+    "@emotion/core": "^11.0.0",
+    "@emotion/styled": "^11.14.0",
+    "react": "^16.11.0",
+    "react-dom": "^16.13.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
