@@ -147,9 +147,10 @@ skynettechnologies/builderio-all-in-one-accessibility
 ### Add the Script
 
 Place the following script in the Builder.io Website as following:
-1.Select **Edit** option.
-2.Select **Insert** option.
-3.Drag **Custom Code** option and drop on Website.
+
+1. Select **Edit** option.
+2. Select **Insert** option.
+3. Drag **Custom Code** option and drop on Website.
 4. Now add the following HTML Script to **Custom Code** **Options** Menu on right side property options.
 
 ```html
